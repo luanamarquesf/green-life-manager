@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/new_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -111,6 +112,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navegação para a NewScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewScreen()),
+                );
+              },
+              child: Text('Ir para a Nova Tela'),
             ),
           ],
         ),
